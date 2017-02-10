@@ -1,0 +1,95 @@
+/* CSS reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+
+/* Header Styles*/
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+header img {
+    width: 100%;
+}
+
+
+/* Content Styles*/
+
+section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.search {
+    text-align: center;
+}
+
+.search input {
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.search button {
+    background-color: darkblue;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.results ul li {
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.results ul li h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.results ul li a img {
+    width: 75%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* Footer Styles */
