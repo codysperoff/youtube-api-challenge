@@ -21,7 +21,9 @@ function getDataFromAPI(searchTerm, callback) {
         data: {
             part: 'snippet',
             key: 'AIzaSyAB0ocjQTwHmy01_uYzmaA-wG9n70Rd6rI',
-            q: 'searchTerm',
+            q: searchTerm,
+            maxResults: 10,
+            type: "video"
         },
         dataType: 'json',
         type: 'GET',
@@ -33,13 +35,33 @@ function getDataFromAPI(searchTerm, callback) {
 //3. Show the api results in a repository
 
 function displayYouTubeSearchData(data) {
-    console.log(data);
+    //console.log(data);
     var resultElement = '';
-    if (data.search) {
-        data.search.forEach(function (item) {
+    if (data.pageInfo.totalResults == 0) {
+        alert("No Results Found!");
+
+    } else {
+        data.items.forEach(function (item) {
             resultElement += '<li>';
-            resultElement += '<h2>' + item.title + '</h2>';
-            resultElement += '<a href="' + www.googleapis.com / youtube / v3 / search + '"><img src ="' +
+            resultElement += '<h2>' + item.snippet.title + '</h2>';
+            resultElement += '<a href="https://www.youtube.com/watch?v=' + item.id.videoId + '" target = "_blank">'; //target blank will open the video in a new window
+            resultElement += '<img src ="' + item.snippet.thumbnails.high.url + '"/>'; //displays the video's thumbnail
+            resultElement += '</a>';
+            resultElement += '</li>';
         });
     }
+    //console.log(resultElement);
+
+    $('#search-results').html(resultElement);
 }
+
+//function watchSubmit() {
+//    $('.search-form').submit(function (e) {
+//        e.preventDefault();
+//        var query = $(this).find('#user-text').val();
+//        getDataFromAPI(query, displayYouTubeSearchData);
+//    });
+//}
+//$(function () {
+//    watchSubmit();
+//});

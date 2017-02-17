@@ -24,6 +24,18 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: black;
+    background-color: deepskyblue;
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 
@@ -32,18 +44,17 @@ body {
 header {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    text-align: center;
 }
 
 header img {
-    width: 100%;
+    width: 20%;
 }
 
 
 /* Content Styles*/
 
 section {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -69,6 +80,11 @@ section {
     margin-top: 10px;
 }
 
+.search button:hover {
+    background-color: limegreen;
+    cursor: pointer;
+}
+
 .results ul li {
     display: inline-block;
     width: 47%;
@@ -78,6 +94,7 @@ section {
     margin-bottom: 20px;
     margin-right: 1%;
     margin-left: 1%;
+    vertical-align: top;
 }
 
 .results ul li h2 {
